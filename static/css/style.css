@@ -48,7 +48,7 @@ h1 { font-size: var(--step-5); } h2 { font-size: var(--step-3); } h3 { font-size
 a { color: inherit; }
 :focus-visible { outline: 3px solid currentColor; outline-offset: 3px; }
 .wrap { width: min(100% - 2 * var(--gutter), var(--wrap)); margin-inline: auto; }
-.sekce { padding-block: var(--space-6); }
+.sekce { padding-block: clamp(3.5rem, 7vw, 6.5rem); }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .skip { position: absolute; left: var(--space-2); top: -4rem; background: var(--bg); padding: var(--space-1) var(--space-2); z-index: 100; }
 .skip:focus { top: var(--space-2); }
@@ -108,8 +108,11 @@ h1{font-size:clamp(2.1rem,1.5rem + 2.6vw,3.6rem)}
 .hlavicka-sekcie p{margin-top:.8rem;color:var(--muted)}
 .podnadpis{margin:2.4rem 0 1rem;font-size:var(--step-1);padding-bottom:.5rem;border-bottom:2px solid var(--navy)}
 .mriezka{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
-@media(min-width:50rem){.mriezka{grid-template-columns:repeat(3,1fr)}}
-@media(min-width:70rem){.mriezka{grid-template-columns:repeat(4,1fr)}}
+
+@media(min-width:50rem){.mriezka{grid-template-columns:repeat(4,1fr)}}
+.mriezka .karta:last-child:nth-child(odd){grid-column:1/-1}
+@media(min-width:50rem){.mriezka .karta:last-child:nth-child(odd){grid-column:auto}}
+@media(min-width:70rem){.mriezka .karta{flex-basis:calc(25% - .75rem)}}
 .karta{background:#fff;border:1px solid var(--line);padding:.8rem .8rem 1.1rem;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
 .karta:hover{transform:translateY(-3px);box-shadow:0 16px 30px -18px rgba(6,50,100,.5)}
 .karta img{width:100%;aspect-ratio:473/298;object-fit:contain;margin-bottom:.8rem}
@@ -134,3 +137,37 @@ button[type=submit]:hover{background:var(--ice)}
 .hero-text>*{animation:vzhuru .7s both}
 .hero-text>*:nth-child(2){animation-delay:.08s}.hero-text>*:nth-child(3){animation-delay:.16s}.hero-text>*:nth-child(4){animation-delay:.24s}
 @keyframes vzhuru{from{opacity:0;transform:translateY(14px)}}
+
+.stitky{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.8rem}
+.stitky li{font-size:var(--step--1);font-weight:600;color:var(--navy);background:#fff;border:1px solid var(--line);padding:.3rem .8rem;border-radius:99px}
+.kolaz{display:grid;grid-template-columns:1.2fr 1fr;grid-template-rows:auto auto;gap:1rem;align-items:center}
+.kolaz>div{background:#fff;border:1px solid var(--line);padding:.8rem;box-shadow:0 20px 40px -28px rgba(6,50,100,.5)}
+.kolaz img{width:100%;height:auto;aspect-ratio:473/298;object-fit:contain}
+.kolaz .k2{grid-row:span 2;display:grid;place-items:center;padding:1.2rem}
+.kolaz .k2 img{aspect-ratio:auto}
+.hero{background:linear-gradient(115deg,#fff 0 50%,var(--ice-svetla) 50% 100%)}
+@media(max-width:59.99rem){.hero{background:linear-gradient(180deg,#fff 0 55%,var(--ice-svetla) 55% 100%)}}
+.foto-okno img{mix-blend-mode:normal}
+@media(max-width:47.99rem){
+ .tabulka-wrap{border:0}
+ table,tbody,tr,td{display:block;min-width:0;width:100%}
+ thead{display:none}
+ tr{padding:.8rem 0;border-bottom:1px solid var(--line)}
+ td{border:0;padding:.1rem 0}
+ td:first-child{font-weight:700;color:var(--navy)}
+ td:nth-child(2),td:nth-child(3){display:inline;font-size:var(--step--1);color:var(--muted)}
+ td:nth-child(2)::after{content:" · "}
+ td:nth-child(3)::before{content:"balenie "}
+}
+
+.kolaz{display:block;position:relative;min-height:30rem}
+.kolaz>div{position:absolute;background:none;border:0;padding:0;box-shadow:none}
+.kolaz img{filter:drop-shadow(0 24px 24px rgba(6,50,100,.25));aspect-ratio:auto}
+.kolaz .k1{top:0;left:0;width:78%}
+.kolaz .k3{bottom:0;right:0;width:52%}
+.kolaz .k2{top:22%;right:0;width:36%;display:block;padding:0;grid-row:auto}
+.kolaz .k4{display:none}
+@media(max-width:59.99rem){.kolaz{min-height:0;aspect-ratio:1/.8;max-width:30rem}}
+h2::after{content:"";display:block;width:3rem;height:3px;margin-top:.5rem;background:linear-gradient(90deg,var(--navy),#6bb6e8)}
+.foto-okno img{max-width:480px;width:100%;height:auto}
+.kolaz .k2{display:none}.kolaz .k1{top:6%;width:88%}

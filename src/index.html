@@ -9,25 +9,22 @@
       <h1>Mrazené kuracie mäso Fragedo pre gastro, firmy a obchod</h1>
       <p class="lead">STARFROST je distribučná spoločnosť, ktorá spolupracuje s rumunským výrobcom Transavia. Dodávame kuracie výrobky značiek Fragedo a Papane, od celých kurčiat po obaľované polotovary.</p>
       <div class="tlacitka"><a class="btn" href="#cennik">Cenník</a><a class="btn btn-svetle" href="#kontakt">Napísať nám</a></div>
+      <ul class="stitky" role="list"><li>Značka Fragedo</li><li>Chov 45 dní metódou welfare</li><li>Spotreba 18 mesiacov</li><li>Odber od 2 kartónov</li></ul>
     </div>
     <div class="hero-foto">
-      {{ img('slider-01.jpg', 'Balenia Fragedo a Papane značky, ktoré STARFROST distribuuje', sizes='(min-width: 60rem) 48rem, 100vw') }}
+      <div class="kolaz">
+        <div class="k1">{{ img('kur_prsia.png', 'Kuracie prsia Fragedo', sizes='(min-width: 60rem) 24rem, 60vw') }}</div>
+        <div class="k2">{{ img('kur_cele.png', 'Kurča bez drobov Fragedo', sizes='(min-width: 60rem) 20rem, 50vw') }}</div>
+        <div class="k3">{{ img('nugety.jpg', 'Kuracie nugety Papane', sizes='(min-width: 60rem) 16rem, 40vw') }}</div>
+        <div class="k4">{{ img('kur_kridla.png', 'Kuracie krídla Fragedo', sizes='(min-width: 60rem) 16rem, 40vw') }}</div>
+      </div>
     </div>
-  </div>
-</section>
-
-<section class="pas">
-  <div class="wrap pas-grid">
-    <p><strong>Fragedo</strong><span>prémiová značka výrobcu Transavia</span></p>
-    <p><strong>45 dní</strong><span>chov metódou welfare</span></p>
-    <p><strong>18 mesiacov</strong><span>doba spotreby mrazených výrobkov</span></p>
-    <p><strong>2 kartóny</strong><span>minimálny odber</span></p>
   </div>
 </section>
 
 <section class="sekce" id="o-nas">
   <div class="wrap dva">
-    <div class="foto-okno">{{ img('about-img.jpg', 'Kuracie mäso Fragedo', sizes='(min-width: 60rem) 36rem, 100vw') }}</div>
+    <div class="foto-okno">{{ img('services-img-01.jpg', 'Celé kurča Fragedo z fariem Transavia', sizes='(min-width: 60rem) 30rem, 100vw') }}</div>
     <div>
       <h2>Prečo výrobky Fragedo</h2>
       <p>Fragedo podpisuje všetky výrobky Transavia, najväčšieho spracovateľa a výrobcu kuracích výrobkov v Rumunsku. Kontrolu majú nad celým reťazcom: od obilia a krmív cez chov a bitúnok až po balenie.</p>
@@ -47,13 +44,13 @@
     <h3 class="podnadpis">Mrazená hydina</h3>
     <ul class="mriezka" role="list">
       {% for p in data.produkty if p.skupina == 'maloobchod' %}
-      <li class="karta">{{ img(p.foto, p.nazev, sizes='(min-width: 60rem) 18rem, 50vw') }}<h4>{{ p.nazev }}</h4><p>{{ p.balenie }}</p></li>
+      <li class="karta">{{ img(p.foto, p.nazev, sizes='(min-width: 60rem) 18rem, 50vw') }}<h4>{{ p.nazev }}</h4><p>{{ p.balenie|replace(' kg',' kg')|replace(' g',' g') }}</p></li>
       {% endfor %}
     </ul>
     <h3 class="podnadpis">Obaľované polotovary</h3>
     <ul class="mriezka" role="list">
       {% for p in data.produkty if p.skupina == 'polotovary' %}
-      <li class="karta">{{ img(p.foto, p.nazev, sizes='(min-width: 60rem) 18rem, 50vw') }}<h4>{{ p.nazev }}</h4><p>{{ p.balenie }}</p></li>
+      <li class="karta">{{ img(p.foto, p.nazev, sizes='(min-width: 60rem) 18rem, 50vw') }}<h4>{{ p.nazev }}</h4><p>{{ p.balenie|replace(' kg',' kg')|replace(' g',' g') }}</p></li>
       {% endfor %}
     </ul>
   </div>
@@ -61,12 +58,12 @@
 
 <section class="sekce" id="cennik">
   <div class="wrap">
-    <div class="hlavicka-sekcie"><h2>Cenník</h2><p>Mrazená hydina premium. Ceny posielame na vyžiadanie, minimálny odber sú 2 kartóny.</p></div>
+    <div class="hlavicka-sekcie"><h2>Cenník</h2><p>Mrazená hydina premium. Ceny všetkých položiek posielame na vyžiadanie. Minimálny odber sú 2 kartóny.</p></div>
     <div class="tabulka-wrap">
     <table>
-      <thead><tr><th>Produkt</th><th>Kartón</th><th>Balenie</th><th>Cena</th></tr></thead>
+      <thead><tr><th>Produkt</th><th>Kartón</th><th>Balenie</th></tr></thead>
       <tbody>
-      {% for p in data.produkty %}<tr><td>{{ p.nazev }}</td><td>{{ p.balenie }}</td><td>{{ p.obal }}</td><td>na vyžiadanie</td></tr>{% endfor %}
+      {% for p in data.produkty %}<tr><td data-l="Produkt">{{ p.nazev }}</td><td data-l="Kartón">{{ p.balenie|replace(' kg',' kg')|replace(' g',' g')|replace(' ks',' ks') }}</td><td data-l="Balenie">{{ p.obal }}</td></tr>{% endfor %}
       </tbody>
     </table>
     </div>

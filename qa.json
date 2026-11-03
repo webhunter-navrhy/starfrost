@@ -3,6 +3,7 @@
   "ok": true,
   "chyby": [],
   "varovani": [
+    "Roztažené fotky >1,3× (mobil, 4): img/kur_prsia-473.webp nat 473 px, vykresleno 630 px (1.33×); img/services-img-01-480.webp nat 480 px, vykresleno 652 px (1.36×); img/sliep_koh-473.webp nat 473 px, vykresleno 661 px (1.40×); img/kridla-473.webp nat 473 px, vykresleno 661 px (1.40×)",
     "Web má noindex (u ostrého webu pravděpodobně chyba)"
   ],
   "metriky": {
@@ -32,18 +33,18 @@
         "pocet_pretekajicich": 0
       }
     },
-    "preneseno_PC_MB": 0.54,
+    "preneseno_PC_MB": 0.47,
     "nejvetsi_obrazek_PC": {
       "kB": 126,
       "url": "http://localhost:8791/starfrost/logo.png"
     },
-    "snimku_PC": 6,
-    "preneseno_mobil_MB": 0.54,
+    "snimku_PC": 5,
+    "preneseno_mobil_MB": 0.47,
     "nejvetsi_obrazek_mobil": {
       "kB": 126,
       "url": "http://localhost:8791/starfrost/logo.png"
     },
-    "snimku_mobil": 7,
+    "snimku_mobil": 8,
     "seo": {
       "title": "STARFROST Holíč – mrazené kuracie výrobky Fragedo a Papane",
       "description": "STARFROST, Holíč: distribúcia mrazených kuracích výrobkov Fragedo a Papane pre gastro, firmy a obcho",
@@ -63,7 +64,7 @@
     "font_text": "Hanken Grotesk",
     "podstranky": {
       "stranek": 1,
-      "obrazku": 18
+      "obrazku": 14
     }
   }
 }

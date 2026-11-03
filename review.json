@@ -1,0 +1,17 @@
+{
+  "znamka": 7,
+  "slabiny": [
+    "Hero na PC: vpravo jsou čtyři malá balení v bílých rámečcích a čtvrté (celé kurča) visí samo uprostřed plochy, takže to působí jako rozsypaná koláž, ne jako jedna kompozice. Udělat 2–3 balení (Fragedo kurča, prsia v sáčku, Papane) zhruba 2× větší, nechat je částečně se překrývat bez bílých rámečků a roztáhnout je na celou výšku hero. Osamocenou malou kartu zrušit. Na mobilu dát pod štítky jen jedno velké balení na celou šířku místo dvou useknutých malých karet na spodku první obrazovky.",
+    "Produkty: osiřelé karty zůstaly. Na PC má Mrazená hydina 4 + 3 karty zarovnané na střed, Obaľované polotovary 4 + 1 (Kuracie krídielka Spice samotná uprostřed). Na mobilu jsou samotné Sliepky, kohúty i Krídielka Spice. Grid zarovnat vlevo (repeat(auto-fill, minmax(220px, 1fr))), nebo poslední kartu roztáhnout přes 2 sloupce jako vodorovnou kartu (fotka vlevo, text vpravo). Na mobilu poslední lichou kartu dát na celou šířku vodorovně.",
+    "Koncept a mráz jako motiv: chladový řetězec se ukazuje jen jako světlá diagonála v hero a vločka v logu, sekce Prečo výrobky Fragedo, Produkty, Cenník i Kontakt vypadají jako běžný katalog. Ledovou diagonálu nebo hvězdu/vločku z loga zopakovat jako jemný dělicí prvek u nadpisů sekcí a za fotkou v Prečo výrobky Fragedo, nová čísla ani teploty nevymýšlet. V téže sekci je na mobilu fotka kuřete roztažená 1,36× (services-img-01-480.webp vykreslená na 652 px). Do srcset přidat variantu 800 px."
+  ],
+  "zavazne": [],
+  "silne": [
+    "Závažná vada z minula je opravená: cenník je na mobilu řádkový seznam (název tučně, pod ním kartón · balenie), sloupec Cena zmizel a „na vyžiadanie“ stojí jednou v úvodu. Na 390 ani 360 px nic nepřetéká.",
+    "Tmavý pruh se statistikami je pryč. Fakta jsou jako světlé štítky pod CTA a logo už se v hero neopakuje.",
+    "V sekci Prečo výrobky Fragedo je místo zvětšeného loga ostrá produktová fotka kuřete Fragedo.",
+    "Brand drží: logo STARFROST vlevo v hlavičce, navy a světle modrá z loga, reálné fotky balení. Vše pochází z briefu, nic vymyšleného, kontakty s IČO a adresou jsou kompletní."
+  ],
+  "verdikt": "Hlavní výtky jsou opravené (mobilní cenník, tmavý pruh, logo místo fotky), takže známka jde ze 6 na 7. Na 8 chybí sevřenější hero kompozice, zarovnané karty produktů bez osiřelých kusů a mráz jako motiv v celém webu, ne jen v hero.",
+  "_hash": "ad1d0559659d8019608d1a33dfe0a6484e00fe4d"
+}
