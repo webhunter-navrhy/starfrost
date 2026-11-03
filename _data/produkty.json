@@ -1,0 +1,86 @@
+[
+ {
+  "nazev": "Kurča bez drobov",
+  "foto": "kur_cele.png",
+  "balenie": "cca 13 kg / 7 ks",
+  "obal": "S",
+  "skupina": "maloobchod"
+ },
+ {
+  "nazev": "Kuracie prsia",
+  "foto": "kur_prsia.png",
+  "balenie": "2 × 5 kg",
+  "obal": "K",
+  "skupina": "maloobchod"
+ },
+ {
+  "nazev": "Kuracie stehno s kúskom chrbta",
+  "foto": "kur_stehno_s.png",
+  "balenie": "cca 10 kg / 26 ks",
+  "obal": "IPW",
+  "skupina": "maloobchod"
+ },
+ {
+  "nazev": "Polievková zmes",
+  "foto": "kur_polievko.png",
+  "balenie": "cca 13 kg / 9 ks",
+  "obal": "S",
+  "skupina": "maloobchod"
+ },
+ {
+  "nazev": "Kuracie stehno horné bez kože, kosti",
+  "foto": "kur_stehna.png",
+  "balenie": "cca 10 kg / 12 ks",
+  "obal": "TF",
+  "skupina": "maloobchod"
+ },
+ {
+  "nazev": "Kuracie krídla",
+  "foto": "kur_kridla.png",
+  "balenie": "cca 7,5 kg / 8 ks",
+  "obal": "TF",
+  "skupina": "maloobchod"
+ },
+ {
+  "nazev": "Sliepky, kohúty",
+  "foto": "sliep_koh.png",
+  "balenie": "cca 13 kg / 4 ks",
+  "obal": "S",
+  "skupina": "maloobchod"
+ },
+ {
+  "nazev": "Kuracie hamburgery obaľované",
+  "foto": "hamburger.jpg",
+  "balenie": "15 ks / 660 g",
+  "obal": "S",
+  "skupina": "polotovary"
+ },
+ {
+  "nazev": "Kuracie nugety",
+  "foto": "nugety.jpg",
+  "balenie": "15 ks / 690 g",
+  "obal": "S",
+  "skupina": "polotovary"
+ },
+ {
+  "nazev": "Kuracie rezne mleté",
+  "foto": "rezne.jpg",
+  "balenie": "15 ks / 640 g",
+  "obal": "S",
+  "skupina": "polotovary"
+ },
+ {
+  "nazev": "Kurací cordon bleu",
+  "foto": "cordon.jpg",
+  "balenie": "15 ks / 660 g",
+  "obal": "S",
+  "skupina": "polotovary"
+ },
+ {
+  "nazev": "Kuracie krídielka obaľované Spice",
+  "foto": "kridla.jpg",
+  "balenie": "15 ks / 450 g",
+  "obal": "S",
+  "skupina": "polotovary"
+ }
+]

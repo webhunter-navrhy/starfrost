@@ -1,0 +1,93 @@
+{% extends "_base.html" %}
+{% set titulek = 'STARFROST Holíč – mrazené kuracie výrobky Fragedo a Papane' %}
+{% set cesta = '' %}
+{% block obsah %}
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <p class="stitok">Distribúcia mrazených výrobkov · Holíč</p>
+      <h1>Mrazené kuracie mäso Fragedo pre gastro, firmy a obchod</h1>
+      <p class="lead">STARFROST je distribučná spoločnosť, ktorá spolupracuje s rumunským výrobcom Transavia. Dodávame kuracie výrobky značiek Fragedo a Papane, od celých kurčiat po obaľované polotovary.</p>
+      <div class="tlacitka"><a class="btn" href="#cennik">Cenník</a><a class="btn btn-svetle" href="#kontakt">Napísať nám</a></div>
+    </div>
+    <div class="hero-foto">
+      {{ img('slider-01.jpg', 'Balenia Fragedo a Papane značky, ktoré STARFROST distribuuje', sizes='(min-width: 60rem) 48rem, 100vw') }}
+    </div>
+  </div>
+</section>
+
+<section class="pas">
+  <div class="wrap pas-grid">
+    <p><strong>Fragedo</strong><span>prémiová značka výrobcu Transavia</span></p>
+    <p><strong>45 dní</strong><span>chov metódou welfare</span></p>
+    <p><strong>18 mesiacov</strong><span>doba spotreby mrazených výrobkov</span></p>
+    <p><strong>2 kartóny</strong><span>minimálny odber</span></p>
+  </div>
+</section>
+
+<section class="sekce" id="o-nas">
+  <div class="wrap dva">
+    <div class="foto-okno">{{ img('about-img.jpg', 'Kuracie mäso Fragedo', sizes='(min-width: 60rem) 36rem, 100vw') }}</div>
+    <div>
+      <h2>Prečo výrobky Fragedo</h2>
+      <p>Fragedo podpisuje všetky výrobky Transavia, najväčšieho spracovateľa a výrobcu kuracích výrobkov v Rumunsku. Kontrolu majú nad celým reťazcom: od obilia a krmív cez chov a bitúnok až po balenie.</p>
+      <ul class="odrazky" role="list">
+        <li>Kurčatá vysoko kvalitného plemena</li>
+        <li>Chov 45 dní metódou welfare</li>
+        <li>Kŕmené kukuricou a obilím z vlastných fariem Transavie</li>
+      </ul>
+      <p>Špecializujeme sa na <strong>mrazený</strong> sortiment. Mrazenie prebieha profesionálnym procesom a po rozmrazení výrobok neobsahuje žiadnu vodu. Mrazené produkty tiež potrebujú menej konzervačných a prídavných látok a máte ich k dispozícii, kedy ich potrebujete.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sekce tmava" id="produkty">
+  <div class="wrap">
+    <div class="hlavicka-sekcie"><h2>Produkty</h2><p>Maloobchodné balenia pre každú domácnosť a špeciálne zvýhodnené gastro balenia pre pohostinstvá, kuchyne, pekárne a veľké spoločnosti.</p></div>
+    <h3 class="podnadpis">Mrazená hydina</h3>
+    <ul class="mriezka" role="list">
+      {% for p in data.produkty if p.skupina == 'maloobchod' %}
+      <li class="karta">{{ img(p.foto, p.nazev, sizes='(min-width: 60rem) 18rem, 50vw') }}<h4>{{ p.nazev }}</h4><p>{{ p.balenie }}</p></li>
+      {% endfor %}
+    </ul>
+    <h3 class="podnadpis">Obaľované polotovary</h3>
+    <ul class="mriezka" role="list">
+      {% for p in data.produkty if p.skupina == 'polotovary' %}
+      <li class="karta">{{ img(p.foto, p.nazev, sizes='(min-width: 60rem) 18rem, 50vw') }}<h4>{{ p.nazev }}</h4><p>{{ p.balenie }}</p></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="sekce" id="cennik">
+  <div class="wrap">
+    <div class="hlavicka-sekcie"><h2>Cenník</h2><p>Mrazená hydina premium. Ceny posielame na vyžiadanie, minimálny odber sú 2 kartóny.</p></div>
+    <div class="tabulka-wrap">
+    <table>
+      <thead><tr><th>Produkt</th><th>Kartón</th><th>Balenie</th><th>Cena</th></tr></thead>
+      <tbody>
+      {% for p in data.produkty %}<tr><td>{{ p.nazev }}</td><td>{{ p.balenie }}</td><td>{{ p.obal }}</td><td>na vyžiadanie</td></tr>{% endfor %}
+      </tbody>
+    </table>
+    </div>
+    <p class="poznamka">Balenie: S – sáčok, TF – tácka s fóliou, IPW – individuálne balené po 1 ks, K – kartón. Doba spotreby všetkých výrobkov 18 mesiacov.</p>
+  </div>
+</section>
+
+<section class="sekce svetle" id="kontakt">
+  <div class="wrap dva">
+    <div>
+      <h2>Kontakt</h2>
+      <p>Máte záujem o naše produkty alebo dlhodobú spoluprácu? Ozvite sa nám, cenník a podmienky Vám radi pošleme.</p>
+      <address>
+        <strong>STARFROST s.r.o.</strong><br>
+        Kollárova 332/34<br>908 51 Holíč<br>
+        IČO: 36266418 · IČ DPH: SK2021914642<br><br>
+        <a href="tel:+421910119319">+421 910 119 319</a><br>
+        <a href="mailto:obchod@starfrost.sk">obchod@starfrost.sk</a>
+      </address>
+    </div>
+    <div>{% include "_formular.html" %}</div>
+  </div>
+</section>
+{% endblock %}

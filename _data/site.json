@@ -1,0 +1,51 @@
+{
+  "slug": "starfrost",
+  "nazev": "STARFROST s.r.o.",
+  "url": "https://webhunter-navrhy.github.io/starfrost/",
+  "base": "/starfrost/",
+  "lang": "sk",
+  "popis": "STARFROST, Holíč: distribúcia mrazených kuracích výrobkov Fragedo a Papane pre gastro, firmy a obchod. Cenník na vyžiadanie, minimálny odber 2 kartóny.",
+  "navrh": true,
+  "domena": "",
+  "og_image": "slider-01.jpg",
+  "logo": "logo.png",
+  "theme_color": "#063264",
+  "typ": "LocalBusiness",
+  "ico": "36266418",
+  "kontakt": {
+    "email": "obchod@starfrost.sk",
+    "telefon": "+421 910 119 319",
+    "adresa": {
+      "ulice": "Kollárova 332/34",
+      "psc": "908 51",
+      "mesto": "Holíč",
+      "zeme": "SK"
+    }
+  },
+  "oteviraci_doba": [],
+  "sameas": [],
+  "cenove_rozpeti": "",
+  "formular": {
+    "endpoint": "",
+    "demo": true,
+    "predmet": "Dopyt z webu STARFROST"
+  },
+  "nav": [
+    {
+      "text": "O nás",
+      "href": "#o-nas"
+    },
+    {
+      "text": "Produkty",
+      "href": "#produkty"
+    },
+    {
+      "text": "Cenník",
+      "href": "#cennik"
+    },
+    {
+      "text": "Kontakt",
+      "href": "#kontakt"
+    }
+  ]
+}
